@@ -21,6 +21,7 @@ public class UsersService {
     public UsersService(UsersRepository usersRepository) {
         this.usersRepository = usersRepository;
     }
+
     public Response getAuthentication(Users data){
         Response response = new Response();
 
@@ -43,4 +44,19 @@ public class UsersService {
 
         return response;
     }
+
+    public Response saveUsers(Users user){
+        Response response = new Response();
+        Map _data = new HashMap();
+        _data.put(Constants.DATA , user);
+
+        this.usersRepository.save(user);
+
+        response.setStatusCode(Constants.SUCCESS_CODE);
+        response.setDescription(Constants.SUCCESS_MESSAGE);
+        response.setResponseBody(_data);
+
+        return response;
+    }
+
 }
