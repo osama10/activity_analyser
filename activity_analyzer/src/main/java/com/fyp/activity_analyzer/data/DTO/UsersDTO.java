@@ -1,5 +1,7 @@
 package com.fyp.activity_analyzer.data.DTO;
 
+import com.fyp.activity_analyzer.commons.Constants;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -13,7 +15,7 @@ public class UsersDTO {
     private String name ;
 
     @NotNull
-    @Size(min = 8)
+    @Size(min = 5)
     private String password ;
 
     @NotNull

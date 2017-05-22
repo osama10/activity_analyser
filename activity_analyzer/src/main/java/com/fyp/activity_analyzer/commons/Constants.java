@@ -13,4 +13,8 @@ public class Constants {
 
     public static String DATA = "Data";
 
+    public static String SIGNUP_SUCCESSFULL = "Sign up successfull";
+
+
+
 }
